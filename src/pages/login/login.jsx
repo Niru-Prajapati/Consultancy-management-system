@@ -3,6 +3,7 @@ import "./login.css";
 import logo from "../../assets/images/logo.png";
 import axios from "axios";
 
+
 import { useState } from "react";
 import AuthButton from "../../components/AuthButton";
 import GoogleButton from "../../components/GoogleButton";
@@ -130,14 +131,7 @@ function Login(){
             className="login-btn"
         />
 
-        <div className="divider">
-            <span>OR</span>
-        </div>
-
-        <GoogleButton
-            text="Continue with Google"
-            onClick={() => console.log("Google Login")}
-        />
+       
         <p className="signup-text">
           Don't have an account?{""}
           <Link to="/signup" className="signup-link">

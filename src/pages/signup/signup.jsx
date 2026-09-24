@@ -194,18 +194,9 @@ function Signup() {
             onClick={handleSignup}
             className="signup-btn"
           />
-
-          <div className="divider">
-            <span>OR</span>
-          </div>
-
-          <GoogleButton
-            text="Continue with Google"
-            onClick={() => console.log("Google Signup")}
-            />
              <p className="login-text">
           Already have an account?{" "}
-          <Link to="/" className="login-link">
+          <Link to="/login" className="login-link">
             Login
           </Link>
         </p>
