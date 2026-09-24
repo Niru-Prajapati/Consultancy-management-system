@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
+from .models import SupportRequest
 
 
 class SignupSerializer(serializers.ModelSerializer):
@@ -51,3 +52,19 @@ class SignupSerializer(serializers.ModelSerializer):
 class LoginSerializer(serializers.Serializer):
     email = serializers.EmailField()
     password = serializers.CharField(write_only=True)
+
+class SupportRequestSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SupportRequest
+        fields = [
+            "id",
+            "subject",
+            "message",
+            "status",
+            "created_at",
+        ]
+        read_only_fields = [
+            "id",
+            "status",
+            "created_at",
+        ]

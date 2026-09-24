@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Booking, BookingDocument
+from .models import Booking, BookingDocument, Application
 
 
 class BookingSerializer(serializers.ModelSerializer):
@@ -29,8 +29,56 @@ class BookingSerializer(serializers.ModelSerializer):
         ]
 
 
+class ApplicationSerializer(serializers.ModelSerializer):
+    client_name = serializers.CharField(
+        source="client.get_full_name",
+        read_only=True
+    )
+
+    client_email = serializers.EmailField(
+        source="client.email",
+        read_only=True
+    )
+
+    service_name = serializers.CharField(
+        source="service.name",
+        read_only=True
+    )
+
+    class Meta:
+        model = Application
+        fields = [
+            "id",
+            "client_name",
+            "client_email",
+            "service",
+            "service_name",
+            "destination",
+            "application_date",
+            "status",
+            "action",
+            "created_at",
+        ]
+        read_only_fields = [
+            "id",
+            "client_name",
+            "client_email",
+            "service_name",
+            "application_date",
+            "created_at",
+        ]
+
+
 class BookingDocumentSerializer(serializers.ModelSerializer):
     class Meta:
         model = BookingDocument
-        fields = ['id', 'booking', 'file', 'uploaded_at']
-        read_only_fields = ['id', 'uploaded_at']
+        fields = [
+            "id",
+            "booking",
+            "file",
+            "uploaded_at"
+        ]
+        read_only_fields = [
+            "id",
+            "uploaded_at"
+        ]

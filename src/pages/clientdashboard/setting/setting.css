@@ -51,3 +51,7 @@
 .save-btn:hover{
     background:#1d4ed8;
 }
+.settings-error {
+  color: #dc2626;
+  margin-bottom: 15px;
+}
