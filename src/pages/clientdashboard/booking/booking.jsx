@@ -49,7 +49,7 @@ function Booking() {
 
       try {
         const response = await axios.get(
-          "http://127.0.0.1:8000/api/accounts/profile/",
+          "https://consultancy-management-system-2.onrender.com/api/accounts/profile/",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -82,7 +82,7 @@ function Booking() {
         setServiceError("");
 
         const response = await axios.get(
-          "http://127.0.0.1:8000/api/content/services/"
+          "https://consultancy-management-system-2.onrender.com/api/content/services/"
         );
 
         console.log("Services received:", response.data);
@@ -166,7 +166,7 @@ function Booking() {
 
     try {
       const response = await axios.post(
-    "http://127.0.0.1:8000/api/bookings/bookings/create",
+    "https://consultancy-management-system-2.onrender.com/api/bookings/bookings/create",
         bookingData,
         {
           headers: {

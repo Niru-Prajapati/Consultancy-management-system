@@ -19,7 +19,7 @@ function Applications() {
       const token = localStorage.getItem("admin_access_token");
 
       const response = await fetch(
-        "http://127.0.0.1:8000/api/bookings/bookings/",
+        "https://consultancy-management-system-2.onrender.com/api/bookings/bookings/",
         {
           method: "GET",
           headers: {

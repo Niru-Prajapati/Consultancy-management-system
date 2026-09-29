@@ -29,7 +29,7 @@ function AdminAppointment() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/api/bookings/bookings/",
+        "https://consultancy-management-system-2.onrender.com/api/bookings/bookings/",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -59,7 +59,7 @@ function AdminAppointment() {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/bookings/bookings/${bookingId}/status/`,
+        `https://consultancy-management-system-2.onrender.com/api/bookings/bookings/${bookingId}/status/`,
         {
           method: "PATCH",
           headers: {

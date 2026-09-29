@@ -24,7 +24,7 @@ function Services() {
         setError("");
 
         const response = await axios.get(
-          "http://127.0.0.1:8000/api/content/services/"
+          "https://consultancy-management-system-2.onrender.com/api/content/services/"
         );
 
         console.log("Services:", response.data);

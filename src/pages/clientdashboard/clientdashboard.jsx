@@ -19,7 +19,7 @@ function ClientDashboard() {
 
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/api/accounts/profile/",
+          "https://consultancy-management-system-2.onrender.com/api/accounts/profile/",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -57,7 +57,7 @@ function ClientDashboard() {
 
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/api/bookings/my-bookings/",
+          "https://consultancy-management-system-2.onrender.com/api/bookings/my-bookings/",
           {
             headers: {
               Authorization: `Bearer ${token}`,

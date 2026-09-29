@@ -44,7 +44,7 @@ function AdminSettings() {
       if (!token) return;
 
       const response = await fetch(
-        "http://127.0.0.1:8000/api/accounts/profile/",
+        "https://consultancy-management-system-2.onrender.com/api/accounts/profile/",
         {
           method: "GET",
           headers: {

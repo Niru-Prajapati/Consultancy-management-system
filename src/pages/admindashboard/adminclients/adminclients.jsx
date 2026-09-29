@@ -34,7 +34,7 @@ function AdminClients() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/api/accounts/admin/clients/",
+        "https://consultancy-management-system-2.onrender.com/api/accounts/admin/clients/",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -347,7 +347,7 @@ const deleteClient = async (clientId) => {
 
   try {
     const response = await fetch(
-      `http://127.0.0.1:8000/api/accounts/admin/clients/${clientId}/`,
+      `https://consultancy-management-system-2.onrender.com/api/accounts/admin/clients/${clientId}/`,
       {
         method: "DELETE",
         headers: {

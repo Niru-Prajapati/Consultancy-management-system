@@ -22,7 +22,7 @@ function RecentApplications() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/api/bookings/bookings/",
+        "https://consultancy-management-system-2.onrender.com/api/bookings/bookings/",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -53,7 +53,7 @@ function RecentApplications() {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/bookings/bookings/${bookingId}/status/`,
+        `https://consultancy-management-system-2.onrender.com/api/bookings/bookings/${bookingId}/status/`,
         {
           method: "PATCH",
           headers: {
@@ -102,7 +102,7 @@ function RecentApplications() {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/bookings/bookings/${bookingId}/assign/`,
+        `https://consultancy-management-system-2.onrender.com/api/bookings/bookings/${bookingId}/assign/`,
         {
           method: "PATCH",
           headers: {

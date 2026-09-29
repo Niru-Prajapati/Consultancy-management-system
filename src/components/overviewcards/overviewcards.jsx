@@ -32,7 +32,7 @@ function OverviewCards() {
 
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/api/bookings/analytics/",
+          "https://consultancy-management-system-2.onrender.com/api/bookings/analytics/",
           {
             headers: {
               Authorization: `Bearer ${token}`,

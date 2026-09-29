@@ -58,7 +58,7 @@ function Signup() {
 
   try {
     const response = await axios.post(
-      "http://127.0.0.1:8000/api/accounts/signup/",
+      "https://consultancy-management-system-2.onrender.com/api/accounts/signup/",
       {
         full_name: name,
         email: email,

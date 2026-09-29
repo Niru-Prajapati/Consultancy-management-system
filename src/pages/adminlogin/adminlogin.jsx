@@ -34,7 +34,7 @@ function AdminLogin() {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/accounts/admin-login/",
+        "https://consultancy-management-system-2.onrender.com/api/accounts/admin-login/",
         {
           username: username,
           password: password,
