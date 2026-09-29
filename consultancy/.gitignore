@@ -21,3 +21,7 @@ env/
 
 # ngrok
 *.log
+
+# Environment variables
+.env
+*.env
